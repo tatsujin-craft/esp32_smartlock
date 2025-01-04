@@ -1,2 +1,8 @@
-idf_component_register(SRCS "ble_server.c"
-                    INCLUDE_DIRS ".")
+idf_component_register(
+    SRCS 
+    "main.c"
+    "ble_server.c"
+    "smartlock.c"
+                    
+    INCLUDE_DIRS "."
+)
