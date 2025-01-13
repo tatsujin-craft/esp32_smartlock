@@ -25,6 +25,9 @@
 #define LED_BLUETOOTH 21 // LED1 (blink on BLE reception)
 #define LED_UNLOCK 22    // LED2 (blink on unlock)
 
+// Solenoid (Electromagnetic Lock)
+#define SOLENOID_POWER_ON_MS 800
+
 //==================================================================================================
 // Prototype
 //==================================================================================================
@@ -88,7 +91,8 @@ void smartlock_unlock(void) {
 
   // Activate the lock
   gpio_set_level(LOCK_GPIO_PIN, 1);
-  vTaskDelay(pdMS_TO_TICKS(500)); // 0.5 second
+  // vTaskDelay(pdMS_TO_TICKS(500)); // 0.5 second
+  vTaskDelay(pdMS_TO_TICKS(SOLENOID_POWER_ON_MS)); // 0.8 second
   gpio_set_level(LOCK_GPIO_PIN, 0);
 
   ESP_LOGI(SMARTLOCK_TAG, "Unlock process complete.");
