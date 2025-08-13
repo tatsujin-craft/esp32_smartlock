@@ -371,10 +371,13 @@ CONFIG_PARTITION_TABLE_MD5=y
 # end of Partition Table
 
 #
-# Example 'GATT SERVER' Config
+# Smartlock Configuration
 #
-# CONFIG_SET_RAW_ADV_DATA is not set
-# end of Example 'GATT SERVER' Config
+CONFIG_FW_VERSION="v0.0.0"
+CONFIG_PRODUCT_NAME="ESP32 SmartLock"
+CONFIG_BLE_DEVICE_NAME="ESP_SMART_LOCK"
+# CONFIG_DEBUG_INFORMATION_ENABLED is not set
+# end of Smartlock Configuration
 
 #
 # Compiler options

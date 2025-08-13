@@ -5,6 +5,8 @@
 extern "C" {
 #endif
 
+void smart_lock_task_start(void);
+
 // Initialize lock/LED GPIO pins
 void smartlock_init(void);
 
